@@ -21,12 +21,12 @@ nav .nav-links-mobile {
    display: none;
 }
 nav .logo{
-    margin-left: 100px;
+    margin-left: 70px;
 }
 nav .nav-links {
     width: 30%;
     justify-content: space-between;
-    margin-right: 150px;
+    margin-right: 100px;
     font-size: 14px;
 }
 nav .nav-links ul {
