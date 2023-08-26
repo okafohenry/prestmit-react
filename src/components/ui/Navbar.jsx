@@ -1,8 +1,14 @@
+import React, { useState } from "react";
 import logo from "../../assets/imgs/Logo.svg";
 import hamburger from "../../assets/imgs/hamburger.png"
+import closeMenu from "../../assets/imgs/close.png"
+import MobileNavbar from "./MobileNavbar";
 
 
 function Navbar(){
+    const [toggle, setToggle] = useState(false);
+
+
     return(
         <header className="w-full ">
             <nav className="w-full flex justify-between items-center">
@@ -27,10 +33,21 @@ function Navbar(){
                         <a href="">Log In</a>
                     </div>
                 </div>
-                <div className="nav-links-mobile flex items-center">
+               {!toggle ?
+                <div 
+                    onClick={() =>   setToggle(true)}
+                    className="nav-links-mobile flex items-center">
                     <img src={hamburger} alt="menu" height="30px" width="30px" />
                 </div>
+                :
+                <div 
+                    onClick={() =>   setToggle(false)}
+                    className="nav-links-mobile flex items-center">
+                    <img src={closeMenu} alt="menu" height="30px" width="30px" />
+                </div>}
             </nav>
+
+            {toggle && <MobileNavbar />}
         </header>
     )
 }

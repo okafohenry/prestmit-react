@@ -15,6 +15,7 @@ main{
 
 nav {
     padding: 25px 0px;
+    position: relative;
 }
 nav .nav-links-mobile {
    display: none;
@@ -43,6 +44,21 @@ nav .nav-links .login-btn {
 nav .nav-links .login-btn a {
     color: #0A2640;
 }
+.mobile-nav {
+    position: absolute;
+    width: 90%;
+    z-index: 20;
+    transition: width 2s ease-in-out 1s;
+    background: rgba(241, 241, 241, 0.927);
+}
+
+.mobile-login-list li a {
+    color: rgb(24, 24, 24);
+}
+.mobile-login-btn a {
+    color: rgb(24, 24, 24);
+}
+
 
 
 .section-1 {
@@ -309,6 +325,10 @@ footer .bottom-links ul li a {
 .gap-y-3 {
     row-gap: 1rem;
 }
+.py-3{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
 
 .box-center{
     margin: 0 auto;
@@ -447,3 +467,5 @@ ul{
         row-gap: 50px;
      }
 }
+
+
